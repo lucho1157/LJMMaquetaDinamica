@@ -1,0 +1,131 @@
+{
+
+"nombre": "Luis José Morello",
+"profesion": "Desarrolador Full Stack Jr",
+"titulo": "Acerca de Mi",
+"about": " Hola, soy un apasionado del conocimiento, mi motor, la curiosidad, me gustan las ciencias, las matemáticas y la física y tener una cultura general adecuada. Adentrarme en el mundo del desarrollo web lo condidero un desafío personal que estoy dispuesto a asumir, y utilizarlo como herramienta para evolucionar profesionalmente, es mi objetivo.",    
+"urlperfil": "/assets/IMG/IMG_20220707_123154928_4.jpg",
+
+
+"redes": [{
+    "nombre": "instagram",
+    "urlred": "https://www.instagram.com/"
+},
+{
+    "nombre": "facebook",
+    "urlred": "https://www.facebook.com/"
+},
+{
+    "nombre": "linkedin",
+    "urlred": "https://ar.linkedin.com/"
+},
+{
+    "nombre": "github",
+    "urlred": "https://github.com/"
+}
+],
+
+"skils": [{
+    "habilidad": "HTML",
+    "porcentaje": "65"
+},
+{
+    "habilidad": "CSS3",
+    "porcentaje": "50"
+},
+{
+    "habilidad": "BS",
+    "porcentaje": "30"
+},
+{
+    "habilidad": "JS",
+    "porcentaje": "20"
+}
+],
+
+"education": {
+    "nombre": "Educación",
+    "img": "./assets/IMG/imagenEDU.png"
+},
+
+
+
+
+"schools": [{
+    
+    "level": "Nivel Secundario:",
+    "instituto": "Escuela de Enseñanza Media 5 'José Ingenieros'",
+    "career": "Carrera: Comercial -",
+    "title": "Título: Perito Mercantil",
+    "start": "Desde: Marzo de 1971 -",
+    "end": "Hasta: Diciembre de 1975",
+    "imglog": "./assets/IMG/logoSecundaria.jpg"
+},
+{
+    "imgedu": "./assets/IMG/imagenEDU.png",
+    "level": "Nivel Universitario:",
+    "instituto": "Universidad Tecnoógica Nacional Regional BA",
+    "career": "Carrera: Ingeniería Mecánica",
+    "start": "Desde: Marzo de 1978 -",
+    "end": "Hasta: Diciembre de 1982",
+    "imglog": "./assets/IMG/logoUTN(a).png"
+},
+{
+    "level": "Nivel Terciario:",
+    "instituto": "Instituto Superior 'Mariano Moreno'",
+    "career": "",
+    "title": "Título: Licenciado en Sistemas Administrativos",
+    "start": "Desde: Abril de 1983 -",
+    "end": "Hasta: Diciembre de 1985",
+    "imglog": "./assets/IMG/logoISMM.jpg"
+}],
+
+"labores": {
+    "nombre": "Experiencia",
+    "img": "./assets/IMG/logoExper.jpg"
+},
+
+"experiences": [{
+    
+    "empresa": "MECOLUZ Iluminación:",
+    "puesto1": "Operario de tornería con material aluminio (tulipas).",
+    "puesto2": "Armado y diseño de artefactos electrolumínicos.",
+    "puesto3": "",
+    "puesto4": "",
+    "tarea": "",
+    "herramientas":"",
+    "start":"Desde: Mayo de 1975 -",
+    "end": "Hasta: Diciembre de 1975",
+    "imglog": "./assets/IMG/logoIluminacion1.png"
+},
+{
+    "empresa": "Cumbre Coop. Arg. de Seguros Ltda:",
+    "puesto1": "Auxiliar Contable.",
+    "puesto2": "Encargado de Tesorería.",
+    "puesto3": "Subjefe Departamento de Cobranzas.",
+    "puesto4": "Encargado General Delegación Morón.",
+    "start":"Desde: Diciembre de 1977 -",
+    "end": "Hasta: Octubre de 1999",
+    "imglog": "./assets/IMG/logoCumbre2.png"
+},
+{
+    "empresa": "Edición de Video:",
+    "tarea": "Editor de video independiente para eventos empresariales y particulares.",
+    "herramientas": "Manejo de Photoshop, Adobe Premier y Sony Vegas.",
+    "start": "Desde: Abril de 1983 -",
+    "end": "Hasta: Diciembre de 1985",
+    "imglog": "./assets/IMG/logoEdicion.png"
+}
+],
+
+"proyecto": {
+    "nombre": "Proyectos"
+},
+
+"projects": [{
+    "name": "Mi Portfolio",
+    "text": "Actualmente desarrollando mi curriculum vitae, atravesando todas las tecnologías necesarias para obtener un proyecto final integrador, que me permita sumar experiencia y conocimiento.",
+    "imglog": "./assets/IMG/imagesCV.jpg"
+}
+]
+}

@@ -1,0 +1,64 @@
+#Proyectos{
+    background-image: url(/assets/IMG/wallpaperbetter.com_1920x1080a.jpg);
+    font-family: Lobster;
+    align-items: center;
+    border:3px solid rgba(10, 10, 10, 0.514);
+    border-radius:22px;
+  }
+
+  h3 {
+    margin-top: 20%;
+  }
+
+  .logo2 {
+    float:right;
+      width: 70px;
+      margin-left: 140px;
+  }
+  
+  @media (max-width: 787px) {
+      .logo2 {
+      width: 50px;
+    }
+  }
+    
+    @media (max-width: 576px) {
+      .logo2 {
+        width: 40px;
+        margin-left: 25px;
+    }
+  }
+  
+  
+  h6 {
+    margin-bottom: 0.2rem;
+  }
+
+  button.btn.btn-close-green.edit.skils1 {
+    float: left;
+    margin-right: 5%;
+  }
+  
+  i.fa-solid.fa-pencil{
+    color:rgb(228, 228, 238);
+    
+  }
+  i.fa-solid.fa-pencil:hover{
+    color:rgb(7, 7, 77);
+  }
+  
+  i.fa-solid.fa-plus{
+    color:rgb(228, 228, 238);
+    
+  }
+  i.fa-solid.fa-plus:hover{
+    color:rgb(7, 7, 77);
+  }
+
+  i.fa-solid.fa-trash{
+    color:rgb(228, 228, 238);
+    
+  }
+  i.fa-solid.fa-trash:hover{
+    color:rgb(7, 7, 77);
+  }

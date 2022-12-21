@@ -1,0 +1,106 @@
+#fondo-foto-perfil{
+    background-position: center;
+    background-image: url(/assets/IMG/monochrome-abstract-space-text-mathematics-brand-199275a-wallhere.com);
+    min-height: 60vh;
+    z-index: 0;
+    opacity: 0.;
+    border:3px solid #000000;
+    border-radius:22px;
+}
+
+.col-6.md-auto.me-auto{
+    font-weight: 900;
+    color:#0e0d0d;
+    font: oblique bold 120% cursive;
+    z-index: 2;
+    background-color:transparent;
+    margin-top: 15%;
+}
+
+h1.sobre-mi{
+    font-size: 250%;
+    text-align: right;
+    margin-top: -10%;
+    color:#ffffff;
+    font-weight: normal;
+}
+
+    @media (max-width: 1280px) {
+      h1.sobre-mi { font-size: 230%;
+       }
+    }
+    
+    @media (max-width: 787px) {
+      h1.sobre-mi { font-size: 210%;
+         }
+    }
+    
+    
+    @media (max-width: 576px) {
+      h1.sobre-mi { font-size: 150%;
+         }
+    }
+
+    @media (max-width: 1280px) {
+      #fondo-foto-perfil { 
+        min-height: 50vh; }
+    }
+    
+    @media (max-width: 787px) {
+      #fondo-foto-perfil { 
+        min-height: 40vh; }
+    }
+    
+    
+    @media (max-width: 576px) {
+      #fondo-foto-perfil { 
+        min-height: 20vh; }
+    }
+    
+
+
+.rounded-circle.w-25{
+    position:absolute;
+    z-index: 1;
+    background-color: #2fbe36cc;
+    height:auto;
+    width: 15% !important;
+    margin-top: -7%;
+    margin-left: 7%;
+}
+
+.rounded-circle {
+    border:3px solid #dbc4c483;
+    border-radius: 40%!important;
+    box-shadow: 12px 12px 12px rgba(37, 13, 2, 0.671)
+}
+
+.de-mi{
+    font-family: lobster;
+    margin-left: 24%;
+    color:#ffffff;
+  }
+  
+  h1.de-mi{
+    font-size: 2rem;
+  }
+
+
+  button.btn.btn-close-green.edit.skils {
+    float: right;
+    margin-right: -12%;
+    margin-top: -6%;
+  }
+
+  button.btn.btn-close-green.edit.skils1 {
+    float: left;
+    margin-right: -5%;
+  }
+
+  i.fa-solid.fa-pencil{
+    color:rgb(228, 228, 238);
+    
+}
+i.fa-solid.fa-pencil:hover{
+    color:rgb(7, 7, 77);
+}

@@ -1,0 +1,47 @@
+i.fa-brands.fa-instagram.fa-xl{
+    color:rgb(123, 123, 156);
+}
+i.fa-brands.fa-instagram.fa-xl:hover{
+    color:rgb(62, 62, 223);
+}
+i.fa-brands.fa-facebook.fa-xl{
+    color:blue;
+}
+i.fa-brands.fa-facebook.fa-xl:hover{
+    color:rgb(21, 21, 122);
+}
+i.fa-brands.fa-linkedin.fa-xl:hover{
+    color:blueviolet;
+}
+i.fa-brands.fa-github.fa-xl{
+    color:rgb(230, 131, 118);
+}
+i.fa-brands.fa-github.fa-xl:hover{
+    color:brown;
+}
+
+i.fa-solid.fa-user.fa-xl{
+    color:rgb(112, 42, 10);
+    
+}
+i.fa-solid.fa-user.fa-xl:hover{
+    color:rgb(221, 219, 82);
+}
+.list-group{
+    --bs-list-group-bg: transparent;
+    --bs-list-group-border-color: transparent;
+    --bs-list-group-item-padding-x: 0.25rem;
+    
+}
+
+.dropdown-menu[data-bs-popper] {
+    top: 80%;
+    text-align: center;
+    left: 80%;
+    font-size: small;
+    color: aqua;
+}
+
+.nav-link {
+    color: blue;
+}

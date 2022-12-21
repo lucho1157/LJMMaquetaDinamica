@@ -1,0 +1,27 @@
+<ul class="list-group list-group-horizontal">
+    <li *ngFor="let red of redesList"
+     class="list-group-item"><a [href]="red.urlred" target="_blank"><i class="fa-brands fa-{{red.nombre}} fa-xl"></i></a></li>
+    
+    <!-- Button trigger modal -->
+    <li class="list-group-item" *ngIf="mostrarDatos === false; else otro">
+        <i class="fa-solid fa-user-lock fa-xl" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            
+        </i>
+    </li>
+</ul>
+    <ng-template #otro>
+        <ul class="navbar-nav">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-user fa-xl" type="button"></i></a>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="" class="nav-link">Cerrar Sesion</a></li>
+            
+          </ul>
+        </ul>
+        
+        
+      
+            
+    </ng-template>
+    
+    
+

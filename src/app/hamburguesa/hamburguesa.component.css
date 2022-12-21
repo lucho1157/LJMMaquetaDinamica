@@ -1,0 +1,15 @@
+.navbar-nav a {
+  
+    background-color: #46ce2400;
+    color: #d8e0e7;
+    border-radius: 30%;
+    text-align:justify;
+    margin-right: 150px;
+    --bs-nav-link-padding-y: 0rem;
+  }
+  
+  .dropdown-menu {
+    
+    --bs-dropdown-bg: #181616;
+    width:100%;
+  }

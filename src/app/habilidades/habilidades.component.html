@@ -1,0 +1,36 @@
+<section id="Habilidades" class="Habilidades">
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-9 mt-4">
+        
+        <ul class="progress-circle-container">
+          <li *ngFor="let skil of skilsList"
+           class="progress-circle progress-65"><span>{{skil.porcentaje}}</span><b>{{skil.habilidad}}</b>
+          </li>
+          
+        </ul>
+      </div>
+      <div class="col-3 mt-4">
+        <button class= "btn btn-close-green edit skils"
+
+        *ngIf="mostrarDatos === true">
+        <i class= "fa-solid fa-pencil" type="button" data-bs-toggle="modal" data-bs-target="#editSkil"></i>
+        
+        
+      </button>
+      <button class= "btn btn-close-green edit skils1"
+
+        *ngIf="mostrarDatos === true">
+        
+        <i class= "fa-solid fa-plus" type="button" data-bs-toggle="modal" data-bs-target="#editSkil1"></i>
+        
+      </button>
+        <h3><u>Habilidades</u></h3>
+      </div>
+    </div>
+  </div>
+  
+  
+</section><br><br>
+
+<app-edit-skil></app-edit-skil>

@@ -1,0 +1,43 @@
+.col-9 mt-4 {
+    position: relative;
+  }
+  
+  .btn.btn-close-white.edit.skils {
+    position:absolute;
+    right: 30px;
+    top: 160px;
+  }
+
+  .btn.btn-close-white.edit.skils1 {
+    position:absolute;
+    right: 30px;
+    top: 180px
+  }
+  .btn.btn-close-black.user {
+    position:absolute;
+    background-color: rgb(69, 231, 145);
+    z-index: 2000;
+    right: 25px;
+    top: 38.65px
+    
+    
+  }
+
+  .btn {
+    --bs-btn-padding-x: 0.5rem;
+    --bs-btn-padding-y: 0.15rem;
+  }
+
+  @media(max-width:729px) {
+    .btn.btn-close-black.user {
+      position:absolute;
+      background-color: rgb(26, 199, 107);
+      z-index: 2000;
+      left: 10rem;
+      right: 25em;
+      top: 90.65px
+      
+      
+    }
+    
+}

@@ -1,0 +1,22 @@
+.navbar.navbar-expand-sm.bg-secondary{
+    background: rgb(10,134,0);
+    background: -moz-radial-gradient(circle, rgba(10,134,0,1) 35%, rgba(0,255,106,1) 100%, rgba(39,171,15,1) 100%);
+    background: -webkit-radial-gradient(circle, rgba(10,134,0,1) 35%, rgba(0,255,106,1) 100%, rgba(39,171,15,1) 100%);
+    background: radial-gradient(circle, rgba(10,134,0,1) 35%, rgba(0,255,106,1) 100%, rgba(39,171,15,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0a8600",endColorstr="#27ab0f",GradientType=1);
+}
+
+
+
+.fixed-top{
+    top: 12px;
+    right: 1%;
+    left: 1%;
+    border:3px solid rgb(10, 10, 10);
+   border-radius:22px;
+}
+
+#logoar.navbar-brand {
+    width: 180px;
+  }
+

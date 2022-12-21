@@ -1,0 +1,507 @@
+     <!-- Modales Sección Habilidades -->
+     <!-- Bookmark form -->
+<div class="modal fade" id="editSkil" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Editar Habilidades</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        
+      </div>
+      <div class="modal-body">
+
+        <div class="form-floating">
+          <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+            <option selected>Seleccionar Habilidades</option>
+            <option *ngFor="let skil of skilsList">{{skil.habilidad}}</option>
+          </select>
+          
+        </div>
+
+        <div class="form-group">
+          <label for="title">Pocentaje</label>
+          <div class="input-group">
+            <div class="input-group-addon">
+              <i class="glyphicon glyphicon-bookmark"></i>
+            </div>
+            <input ng-model="skil.porcentaje" id="title" class="form-control" type="text" placeholder="Ingresar Pocentaje">
+          </div>
+        </div>
+        
+        
+      <!-- Main content here -->
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="editSkil1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Agregar Habilidad</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        
+      </div>
+      <div class="modal-body">
+
+        <div class="form-group">
+          <label for="title">Habilidad</label>
+          <div class="input-group">
+            <div class="input-group-addon">
+              <i class="glyphicon glyphicon-bookmark"></i>
+            </div>
+            <input ng-model="skil.porcentaje" id="title" class="form-control" type="text" placeholder="Ingresar Habilidad">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="title">Pocentaje</label>
+          <div class="input-group">
+            <div class="input-group-addon">
+              <i class="glyphicon glyphicon-bookmark"></i>
+            </div>
+            <input ng-model="skil.porcentaje" id="title" class="form-control" type="text" placeholder="Ingresar Pocentaje">
+          </div>
+        </div>
+        
+        
+      <!-- Main content here -->
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Sección Acerca de MI -->
+
+<div class="modal fade" id="editSkil2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Editar Acerca de Mi</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        
+      </div>
+      <div class="modal-body">
+
+        <div class="form-group">
+          <label for="title">Sobre Mi</label>
+          <div class="input-group">
+            <div class="input-group-addon">
+              <i class="glyphicon glyphicon-bookmark"></i>
+            </div>
+            <input ng-model="miPorfolio.about" id="title" class="form-control" type="text" placeholder="Ingresar nuevo texto">
+          </div>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="editSkil3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Editar Perfil</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        
+      </div>
+      <div class="modal-body">
+
+        <div class="form-group">
+          <label for="title">Profesión</label>
+          <div class="input-group">
+            <div class="input-group-addon">
+              <i class="glyphicon glyphicon-bookmark"></i>
+            </div>
+            <input ng-model="miPorfolio.profesion" id="title" class="form-control" type="text" placeholder="Ingresar cambios">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="url">Imagen Perfil</label>
+          <div class="input-group">
+            <div class="input-group-addon">
+              <i class="glyphicon glyphicon-bookmark"></i>
+            </div>
+            <input ng-model="miPorfolio.urlperfil" id="title" class="form-control" type="text" placeholder="URL de imagen">
+          </div>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Sección Educación -->
+
+<div class="modal fade" id="editSkil4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Editar Educación</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        
+      </div>
+      <div class="modal-body">
+
+        <div class="form-floating">
+          <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+            <option selected>Seleccionar Instituto</option>
+            <option *ngFor="let school of schoolsList">{{school.instituto}}</option>
+          </select>
+          
+        </div>
+
+
+        <div class="form-group">
+          <label for="title">Items</label>
+          <div class="input-group">
+            <div class="input-group-addon">
+              <i class="glyphicon glyphicon-bookmark"></i>
+            </div>
+            <input id="title" class="form-control" type="text" placeholder="Ingresar Item a modificar">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="url">Logo</label>
+          <div class="input-group">
+            <div class="input-group-addon">
+              <i class="glyphicon glyphicon-bookmark"></i>
+            </div>
+            <input ng-model="school.imglog" id="title" class="form-control" type="text" placeholder="URL de nuevo logo">
+          </div>
+        </div>
+        
+        
+      <!-- Main content here -->
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="editSkil5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Agregar Educación</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        
+      </div>
+      <div class="modal-body">
+
+        <div class="form-group">
+          <label for="title">Instituto</label>
+          <div class="input-group">
+            <div class="input-group-addon">
+              <i class="glyphicon glyphicon-bookmark"></i>
+            </div>
+            <input ng-model="school.instituto" id="title" class="form-control" type="text" placeholder="Ingresar nombre del Instituto">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="title">Carrera</label>
+          <div class="input-group">
+            <div class="input-group-addon">
+              <i class="glyphicon glyphicon-bookmark"></i>
+            </div>
+            <input id="title" class="form-control" type="text" placeholder="nombre de la carrera">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="url">Logo del Instituto</label>
+          <div class="input-group">
+            <div class="input-group-addon">
+              <i class="glyphicon glyphicon-bookmark"></i>
+            </div>
+            <input ng-model="school.imglog" id="title" class="form-control" type="text" placeholder="URL del logo">
+          </div>
+        </div>
+        
+        
+      <!-- Main content here -->
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal Sección Experiencia -->
+
+<div class="modal fade" id="editSkil6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Editar Experiencia</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        
+      </div>
+      <div class="modal-body">
+
+        <div class="form-floating">
+          <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+            <option selected>Seleccionar Empresa</option>
+            <option *ngFor="let experience of experiencesList">{{experience.empresa}}</option>
+          </select>
+          
+        </div>
+
+
+        <div class="form-group">
+          <label for="title">Items</label>
+          <div class="input-group">
+            <div class="input-group-addon">
+              <i class="glyphicon glyphicon-bookmark"></i>
+            </div>
+            <input id="title" class="form-control" type="text" placeholder="Ingresar Item a modificar">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="url">Logo</label>
+          <div class="input-group">
+            <div class="input-group-addon">
+              <i class="glyphicon glyphicon-bookmark"></i>
+            </div>
+            <input ng-model="school.imglog" id="title" class="form-control" type="text" placeholder="URL de nuevo logo">
+          </div>
+        </div>
+        
+        
+      <!-- Main content here -->
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="editSkil7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Agregar Experiencia</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        
+      </div>
+      <div class="modal-body">
+
+        <div class="form-group">
+          <label for="title">Empresa</label>
+          <div class="input-group">
+            <div class="input-group-addon">
+              <i class="glyphicon glyphicon-bookmark"></i>
+            </div>
+            <input ng-model="experience.empresa" id="title" class="form-control" type="text" placeholder="Ingresar nombre de la Empresa">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="title">Puesto</label>
+          <div class="input-group">
+            <div class="input-group-addon">
+              <i class="glyphicon glyphicon-bookmark"></i>
+            </div>
+            <input id="title" class="form-control" type="text" placeholder="ingresar puesto">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="url">Logo de la empresa</label>
+          <div class="input-group">
+            <div class="input-group-addon">
+              <i class="glyphicon glyphicon-bookmark"></i>
+            </div>
+            <input ng-model="school.imglog" id="title" class="form-control" type="text" placeholder="URL del logo">
+          </div>
+        </div>
+        
+        
+      <!-- Main content here -->
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal Sección Proyectos -->
+
+<div class="modal fade" id="editSkil8" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Editar Proyecto</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        
+      </div>
+      <div class="modal-body">
+
+        <div class="form-floating">
+          <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+            <option selected>Seleccionar Proyecto</option>
+            <option *ngFor="let project of projectsList">{{project.name}}</option>
+          </select>
+          
+        </div>
+
+
+        <div class="form-group">
+          <label for="title">Descripción</label>
+          <div class="input-group">
+            <div class="input-group-addon">
+              <i class="glyphicon glyphicon-bookmark"></i>
+            </div>
+            <input id="title" class="form-control" type="text" placeholder="Ingresar nuevo texto">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="url">Logo</label>
+          <div class="input-group">
+            <div class="input-group-addon">
+              <i class="glyphicon glyphicon-bookmark"></i>
+            </div>
+            <input ng-model="school.imglog" id="title" class="form-control" type="text" placeholder="URL de nuevo logo">
+          </div>
+        </div>
+        
+        
+      <!-- Main content here -->
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="editSkil9" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Agregar Proyecto</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        
+      </div>
+      <div class="modal-body">
+
+        <div class="form-group">
+          <label for="title">Nombre del Proyecto</label>
+          <div class="input-group">
+            <div class="input-group-addon">
+              <i class="glyphicon glyphicon-bookmark"></i>
+            </div>
+            <input ng-model="project.name" id="title" class="form-control" type="text" placeholder="Ingresar nombre del proyecto">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="title">Descripción</label>
+          <div class="input-group">
+            <div class="input-group-addon">
+              <i class="glyphicon glyphicon-bookmark"></i>
+            </div>
+            <input id="title" class="form-control" type="text" placeholder="ingresar texto">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="url">Logo del proyecto</label>
+          <div class="input-group">
+            <div class="input-group-addon">
+              <i class="glyphicon glyphicon-bookmark"></i>
+            </div>
+            <input ng-model="school.imglog" id="title" class="form-control" type="text" placeholder="URL del logo">
+          </div>
+        </div>
+        
+        
+      <!-- Main content here -->
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="editSkil10" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Eliminar Proyecto</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        
+      </div>
+      <div class="modal-body">
+
+        <div class="form-floating">
+          <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+            <option selected>Seleccionar Proyecto</option>
+            <option *ngFor="let project of projectsList">{{project.name}}</option>
+          </select>
+          
+        </div>
+        
+        
+      <!-- Main content here -->
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Eliminar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      
+

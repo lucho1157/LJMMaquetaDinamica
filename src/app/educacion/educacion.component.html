@@ -1,0 +1,46 @@
+<section id="Educacion" class="Educacion">
+  <div class="container text-center">
+    <div  class="row">
+      <div class="col">
+
+        <button class= "btn btn-close-green edit skils1"
+
+        *ngIf="mostrarDatos === true">
+        <i class= "fa-solid fa-pencil" type="button" data-bs-toggle="modal" data-bs-target="#editSkil4"></i>
+        
+        
+      </button>
+      <button class= "btn btn-close-green edit skils1"
+
+        *ngIf="mostrarDatos === true">
+        
+        <i class= "fa-solid fa-plus" type="button" data-bs-toggle="modal" data-bs-target="#editSkil5"></i>
+        
+      </button>
+        <h3><u>{{sectionEdu.education.nombre}}</u></h3>
+        <img class="logo1" [src]="sectionEdu.education.img">
+        
+      </div>
+
+      <div class="col-10 mt-4">
+        <div *ngFor="let school of schoolsList" class="row">
+          <div class="col-10">
+        
+        <h6><span class="rojo"><u>{{school.level}}</u></span></h6>
+        <h6><span class="rojo">{{school.instituto}}</span></h6>
+        <h6><span class="rojo">{{school.career}}{{school.title}}</span></h6>
+        <h6><span class="rojo">{{school.start}}{{school.end}}</span></h6>
+        <br>
+        <br>
+      </div>
+      <div class="col-2">
+        <img class="logo2" [src]="school.imglog">
+      </div>
+      
+    </div>
+  </div>
+</div>
+</div>
+</section><br><br>
+
+<app-edit-skil></app-edit-skil>

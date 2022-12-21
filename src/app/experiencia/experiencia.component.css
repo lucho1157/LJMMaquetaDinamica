@@ -1,0 +1,107 @@
+#Experiencia{
+    background-image: url(/assets/IMG/wallpaperbetter.com_1920x1080a.jpg);
+    font-family: Lobster;
+    align-items: center;
+    margin-top: 10%;
+    border-radius: 3%;
+    border:3px solid #3e0846cb;
+    border-radius:22px;
+}
+
+h3 {
+  margin-top: 40px;
+}
+
+.exper {
+  margin-left: -10px;
+}
+
+@media(max-width:550px) {
+  h3 {
+      writing-mode:vertical-lr;
+      text-orientation:sideways;
+  }
+  .exper {
+    margin-left: 15px;
+    margin-top: 30px;
+    font-size: 11px;
+  }
+}
+
+.logo1 {
+  width: 80px;
+  margin-top: 30px;
+  opacity: 0.5;
+  
+}
+
+@media (max-width: 787px) {
+  .logo1 {
+  width: 50px;
+}
+}
+
+@media (max-width: 576px) {
+  .logo1 {
+    width: 30px;
+  }
+  }
+
+.logo2 {
+    width: 70px;
+    margin-right: 140px;
+}
+
+  @media (max-width: 787px) {
+    .logo2 {
+    width: 50px;
+  }
+}
+  
+  @media (max-width: 576px) {
+    .logo2 {
+      width: 30px;
+  }
+}
+
+.logo5 {
+        width: 70px;
+        margin-right: 105px;
+}
+
+  @media (max-width: 787px) {
+        .logo5 {
+        width: 50px;
+  }
+      }
+      
+  @media (max-width: 576px) {
+.logo5 {
+          width: 30px;
+  }
+}
+
+h6 {
+  margin-bottom: 0.2rem;
+}
+
+button.btn.btn-close-green.edit.skils1 {
+  float: left;
+  margin-right: 5%;
+}
+
+i.fa-solid.fa-pencil{
+  color:rgb(228, 228, 238);
+  
+}
+i.fa-solid.fa-pencil:hover{
+  color:rgb(7, 7, 77);
+}
+
+i.fa-solid.fa-plus{
+  color:rgb(228, 228, 238);
+  
+}
+i.fa-solid.fa-plus:hover{
+  color:rgb(7, 7, 77);
+}
