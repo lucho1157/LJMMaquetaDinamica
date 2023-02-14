@@ -1,0 +1,48 @@
+<div class="container" *ngIf="expe">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form [formGroup]="form" (ngSubmit)="form.valid && onUpdate()">
+        <div class="form-group">
+            <label for="experiencia"><h3>Editar Experiencia</h3></label>
+            <div class="form-group">
+                <label for="educacion"><h6>Nivel Académico</h6></label>
+            <input type="text" class="form-control mb-12" id="empresa" formControlName="empresa" [(ngModel)]="expe.empresa" required [ngClass]="{'is-invalid': Empresa?.errors && Empresa?.touched, 'is-valid': !Empresa?.errors && Empresa?.touched}">
+            <div *ngIf="Empresa?.errors && Empresa?.touched">    
+                <p *ngIf="Empresa?.hasError('required')" class="text danger">
+                El nivel académico es requerido.
+                </p>
+            </div>
+            </div>
+            <label for="educacion"><h6>Nivel Académico</h6></label>
+            <input type="text" class="form-control mb-3" id="puesto1" formControlName="puesto1" [(ngModel)]="expe.puesto1" required [ngClass]="{'is-invalid': Puesto1?.errors && Puesto1?.touched, 'is-valid': !Puesto1?.errors && Puesto1?.touched}">
+            <div *ngIf="Puesto1?.errors && Puesto1?.touched">    
+                <p *ngIf="Puesto1?.hasError('required')" class="text danger">
+                El Puesto es requerido.
+                </p>
+            </div>
+            <input type="text" class="form-control mb-3" id="puesto2" formControlName="puesto2" [(ngModel)]="expe.puesto2">
+            <input type="text" class="form-control mb-3" id="puesto3" formControlName="puesto3" [(ngModel)]="expe.puesto3">
+            <input type="text" class="form-control mb-3" id="puesto4" formControlName="puesto4" [(ngModel)]="expe.puesto4">
+            <input type="text" class="form-control mb-3" id="tarea" formControlName="tarea" [(ngModel)]="expe.tarea">
+            <input type="text" class="form-control mb-3" id="herramientas" formControlName="herramientas" [(ngModel)]="expe.herramientas">
+            <input type="text" class="form-control mb-3" id="start" formControlName="start" [(ngModel)]="expe.start" required [ngClass]="{'is-invalid': Start?.errors && Start?.touched, 'is-valid': !Start?.errors && Start?.touched}">
+            <div *ngIf="Start?.errors && Start?.touched">    
+                <p *ngIf="Start?.hasError('required')" class="text danger">
+                Fecha de inicio es requerida.
+                </p>
+              </div>
+            <input type="text" class="form-control mb-3" id="end" formControlName="end" [(ngModel)]="expe.end" required [ngClass]="{'is-invalid': End?.errors && End?.touched, 'is-valid': !End?.errors && End?.touched}">
+            <div *ngIf="End?.errors && End?.touched">    
+                <p *ngIf="End?.hasError('required')" class="text danger">
+                Fecha de fin es requerida.
+                </p>
+              </div>
+            <input type="text" class="form-control mb-3" id="imglog" formControlName="imglog" [(ngModel)]="expe.imglog">
+        </div>
+        <button class="btn btn-primary">
+            Actualizar Experiencia
+        </button>
+    </form>
+</div>
+</div>
+</div>

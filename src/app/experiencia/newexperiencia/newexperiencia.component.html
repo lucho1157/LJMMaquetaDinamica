@@ -1,0 +1,136 @@
+<!-- Modal Crear Experiencia -->
+
+<div class="modal fade" id="newExp" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Agregar Experiencia</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="limpiar($event)"></button>
+        </div>
+        <div class="modal-body">
+          <form class="">
+            <div class="col-auto">
+          <form [formGroup]="form" (ngSubmit)="onEnv($event)">
+  
+          <div class="form-group">
+            <label for="experiencia">Experiencia</label>
+            <div class="input-group">
+              <input type="text" class="form-control" formControlName="empresa" [(ngModel)]="empresa" [ngClass]="{'is-invalid': Empresa?.errors && Empresa?.touched, 'is-valid': !Empresa?.errors && Empresa?.touched}" id="empresa" type="text" placeholder="Nombre de la Empresa">
+            </div>
+            <div *ngIf="Empresa?.errors && Empresa?.touched">    
+              <p *ngIf="Empresa?.hasError('required')" class="text danger">
+              El nombre de la empresa es requerido.
+              </p>
+              
+             </div>
+          </div>
+  
+          <div class="form-group">
+            <label for="experiencia">Puesto</label>
+            <div class="input-group">
+              <input type="text" class="form-control"formControlName="puesto1" [(ngModel)]="puesto1" [ngClass]="{'is-invalid': Puesto1?.errors && Puesto1?.touched, 'is-valid': !Puesto1?.errors && Puesto1?.touched}" id="Puesto1" type="text" placeholder="Puesto Ocupado 1">
+            </div>
+            <div *ngIf="Puesto1?.errors && Puesto1?.touched">    
+              <p *ngIf="Puesto1?.hasError('required')" class="text danger">
+              El Puesto es requerido.
+              </p>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="experiencia">Puesto</label>
+            <div class="input-group">
+              <input type="text" class="form-control" id="puesto2" formControlName="puesto2" [(ngModel)]="puesto2" type="text" placeholder="Puesto Ocupado 2">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="experiencia">Puesto</label>
+            <div class="input-group">
+              <input type="text" class="form-control" id="puesto3" formControlName="puesto3" [(ngModel)]="puesto3" placeholder="Puesto Ocupado 3">
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <label for="experiencia">Puesto</label>
+            <div class="input-group">
+              <input type="text" class="form-control" id="puesto4" formControlName="puesto4" [(ngModel)]="puesto4" type="text" placeholder="Puesto Ocupado 4">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="experiencia">Tarea</label>
+            <div class="input-group">
+              <input type="text" class="form-control" id="tarea" formControlName="tarea" [(ngModel)]="tarea" type="text" placeholder="Tarea realizada">
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <label for="experiencia">Herramientas</label>
+            <div class="input-group">
+              <input type="text" class="form-control" id="herramientas" formControlName="herramientas" [(ngModel)]="herramientas" type="text" placeholder="Herramientas utilizadas">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="experiencia">Inicio</label>
+            <div class="input-group">
+              <input type="text" class="form-control"formControlName="start" [(ngModel)]="start" [ngClass]="{'is-invalid': Start?.errors && Start?.touched, 'is-valid': !Start?.errors && Start?.touched}" id="Start" type="text" placeholder="Desde">
+            </div>
+            <div *ngIf="Start?.errors && Start?.touched">    
+              <p *ngIf="Start?.hasError('required')" class="text danger">
+              Fecha de inicio es requerida.
+              </p>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="experiencia">Hasta</label>
+            <div class="input-group">
+              <input type="text" class="form-control" formControlName="end" [(ngModel)]="end" [ngClass]="{'is-invalid': End?.errors && End?.touched, 'is-valid': !End?.errors && End?.touched}" id="end" type="text" placeholder="Hasta">
+            </div>
+            <div *ngIf="End?.errors && End?.touched">    
+              <p *ngIf="End?.hasError('required')" class="text danger">
+              Fecha de fin es requerida.
+              </p>
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <label for="experiencia">Url Logo</label>
+            <div class="input-group">
+              <input type="text" class="form-control" id="imglog" formControlName="imglog" [(ngModel)]="imglog" type="text" placeholder="Ingresar url logo">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="experiencia">ID</label>
+            <div class="input-group">
+              <input type="text" class="form-control" formControlName="personaId" [(ngModel)]="personaId" [ngClass]="{'is-invalid': PersonaId?.errors && PersonaId?.touched, 'is-valid': !PersonaId?.errors && PersonaId?.touched}" id="personaId" type="text" placeholder="Ingresar ID">
+            </div>
+            <div *ngIf="PersonaId?.errors && PersonaId?.touched">    
+              <p *ngIf="PersonaId?.hasError('required')" class="text danger">
+              ID es requerido.
+              </p>
+              <p *ngIf="PersonaId?.hasError('min')" class="text danger">
+                El ID debe ser 1.
+                </p>
+              <p *ngIf="PersonaId?.hasError('max')" class="text danger">
+                El ID debe ser 1.
+              </p>
+             </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal" (click)="limpiar($event)">Limpiar</button>
+            <button type="submit" class="btn btn-primary">Agregar</button>
+          </div>
+        </form>
+      </div>
+    </form>
+    
+      </div>
+        </div>
+      </div>
+    </div>
+
+

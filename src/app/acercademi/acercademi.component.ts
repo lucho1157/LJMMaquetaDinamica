@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Acercademi } from '../model/acercademi';
 import { PortfolioService } from '../portfolio.service';
+import { AcercademiService } from '../serviciosmodel/acercademi.service';
+
 
 @Component({
   selector: 'app-acercademi',
@@ -8,9 +12,12 @@ import { PortfolioService } from '../portfolio.service';
 })
 export class AcercademiComponent implements OnInit {
   mostrarDatos!: boolean;
-  miPorfolio:any;
+  personasList:any;
+  perso: Acercademi = null;
+  id: number;
+  
 
-  constructor(private datosPortfolio:PortfolioService) {
+  constructor(private datosPortfolio:PortfolioService, private demiService: AcercademiService, private activatedRouter: ActivatedRoute) {
     
    }
 
@@ -19,12 +26,34 @@ export class AcercademiComponent implements OnInit {
    }
 
   ngOnInit(): void {
+
+
+    this.cargarSobremi();
+
     this.datosPortfolio.disparadorDeEdicion.subscribe( data => {
       this.mostrarDatos=true;
-      })
-      this.datosPortfolio.obtenerDatos().subscribe(data =>{
-        this.miPorfolio=data;
       });
+
+   }
+
+  cargarSobremi():void{
+    this.demiService.verPersonas().subscribe(data =>{
+      console.log(data)
+      this.personasList=data;
+    });
+   }
+
+
+   onUpdate(): void{
+    const perso = this.activatedRouter.snapshot.params['id'];
+    this.demiService.crearPersona(this.perso).subscribe(data => {
+    window.location.reload();
+    
+      
+      
+    });
   }
+
+   
 
 }

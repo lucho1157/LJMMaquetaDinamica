@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Educacion } from '../model/educacion';
 import { PortfolioService } from '../portfolio.service';
+import { EducacionService } from '../serviciosmodel/educacion.service';
+
 
 @Component({
   selector: 'app-educacion',
@@ -8,25 +12,30 @@ import { PortfolioService } from '../portfolio.service';
 })
 export class EducacionComponent implements OnInit {
   mostrarDatos!: boolean;
-  schoolsList:any;
-  sectionEdu:any;
+  schoolsList: Educacion[]=[];
   
+  constructor(private datosPortfolio:PortfolioService, private educacionService:EducacionService,private activatedRouter: ActivatedRoute) { 
 
+  }
 
-
-
-  constructor(private datosPortfolio:PortfolioService) { }
   onShowHide(value: boolean){
     this.mostrarDatos = value;
    }
 
   ngOnInit(): void {
+
+    this.cargarEducacion();
+    
     this.datosPortfolio.disparadorDeEdicion.subscribe( data => {
       this.mostrarDatos=true;
       })
-    this.datosPortfolio.obtenerDatos().subscribe(data =>{
-      this.schoolsList=data.schools;
-      this.sectionEdu=data;
+    
+  }
+
+  cargarEducacion():void{
+    this.educacionService.verEducacion().subscribe(data =>{
+      console.log(data);
+      this.schoolsList=data;
     });
   }
 

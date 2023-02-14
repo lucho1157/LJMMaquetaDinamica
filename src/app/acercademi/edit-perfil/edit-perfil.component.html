@@ -1,0 +1,31 @@
+<div class="container" *ngIf="perso">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+    <form [formGroup]="form"  (ngSubmit)="form.valid && onUpdate()">
+      <div class="form-group">
+            <label for="about"><h3>Mi Perfil</h3></label>
+            <div class="form-group">
+               <label for="educacion"><h6>Profesión</h6></label>
+            <input type="text" class="form-control mb-3" id="profesion" formControlName="profesion" [(ngModel)]="perso.profesion" required rows="5"[ngClass]="{'is-invalid': Profesion?.errors && Profesion?.touched, 'is-valid': !Profesion?.errors && Profesion?.touched}">
+         <div *ngIf="Profesion?.errors && Profesion?.touched">    
+            <p *ngIf="Profesion?.hasError('required')" class="text danger">
+             La profesión es requerida.
+            </p>
+         </div>
+         <label for="educacion"><h6>URL logo de imagen</h6></label>
+            <input type="text" class="form-control mb-3" id="urlperfil" formControlName="urlperfil" [(ngModel)]="perso.urlperfil" required rows="5"[ngClass]="{'is-invalid': Urlperfil?.errors && Urlperfil?.touched, 'is-valid': !Urlperfil?.errors && Urlperfil?.touched}">
+         <div *ngIf="Urlperfil?.errors && Urlperfil?.touched">    
+            <p *ngIf="Urlperfil?.hasError('required')" class="text danger">
+             La url de la imagen es requerida.
+            </p>
+         </div>
+      </div>
+      </div>
+        
+        <button class="btn btn-primary">
+            Actualizar Texto
+        </button>
+    </form>
+</div>
+</div>
+</div>

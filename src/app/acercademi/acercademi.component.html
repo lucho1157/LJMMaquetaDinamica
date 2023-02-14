@@ -1,5 +1,7 @@
 <!--fondo foto perfil-->
 
+<div *ngFor="let persona of personasList; index as ab">
+
 <section class="home" id="home"></section>
 
 <section id="fondo-foto-perfil">
@@ -15,12 +17,12 @@
         <button class= "btn btn-close-green edit skils"
 
         *ngIf="mostrarDatos === true">
-        <i class= "fa-solid fa-pencil" type="button" data-bs-toggle="modal" data-bs-target="#editSkil2"></i>
+        <i class= "fa-solid fa-pencil" type="button" routerLink="/editpersona/{{persona.id}}"></i>
         
       </button>
-        <h1 class="sobre-mi" id="sobremi">{{miPorfolio.titulo}}</h1><br><br>
+        <h1 class="sobre-mi" id="sobremi">{{persona.banner}}</h1><br><br>
         
-        <h6><b><span>{{miPorfolio.about}}</span></b></h6>
+        <h6><b>{{persona.about}}</b></h6>
       </div>
       
       
@@ -38,20 +40,19 @@
 <button class= "btn btn-close-green edit skils1"
 
         *ngIf="mostrarDatos === true">
-        <i class= "fa-solid fa-pencil" type="button" data-bs-toggle="modal" data-bs-target="#editSkil3"></i>
+        <i class= "fa-solid fa-pencil" type="button" routerLink="/editperfil/{{persona.id}}"></i>
         
       </button>
 
-<img [src]="miPorfolio.urlperfil" class="rounded-circle w-25" alt="..." title="...">
+      
+<img [src]="persona.urlperfil" class="rounded-circle w-25" alt="..." title="...">
 
-<h1 class="de-mi">{{miPorfolio.nombre}}</h1>
-<h4 class="de-mi">{{miPorfolio.profesion}}</h4>
+<h1 class="de-mi">{{persona.nombre}} {{persona.apellido}}</h1>
+<h4 class="de-mi">{{persona.profesion}}</h4>
+</div>
 
 <div class="container text-center">
 </div>
-
-<app-edit-skil></app-edit-skil>
-
 
 
 

@@ -1,0 +1,87 @@
+<!-- Modal Crear Proyecto -->
+
+<div class="modal fade" id="newPro" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Agregar Proyecto</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="limpiar($event)"></button>
+        </div>
+          <div class="modal-body">
+            <form class="">
+              <div class="col-auto">
+            <form [formGroup]="form" (ngSubmit)="onEnv($event)">
+    
+            <div class="form-group">
+              <label for="proyecto">Proyecto</label>
+              <div class="input-group">
+                <input type="text" class="form-control" formControlName="name" [(ngModel)]="name" [ngClass]="{'is-invalid': Name?.errors && Name?.touched, 'is-valid': !Name?.errors && Name?.touched}" id="name" type="text" placeholder="Ingresar Nombre del Proyecto">
+              </div>
+              <div *ngIf="Name?.errors && Name?.touched">    
+                <p *ngIf="Name?.hasError('required')" class="text danger">
+                El Nombre del proyecto es requerido.
+                </p>
+              </div>
+            </div>
+    
+            <div class="form-group">
+                <label for="proyecto">Descripción</label>
+              <div class="input-group">
+                <textarea type="text" class="form-control" formControlName="text" [(ngModel)]="text" [ngClass]="{'is-invalid': Text?.errors && Text?.touched, 'is-valid': !Text?.errors && Text?.touched}" id="text" type="text" placeholder="Ingresar Detalle" rows="5" ></textarea>
+              </div>
+              <div *ngIf="Text?.errors && Text?.touched">    
+                <p *ngIf="Text?.hasError('required')" class="text danger">
+                La Descripción es requerida.
+                </p>
+                <p *ngIf="Text?.errors['minlength']" class="text danger">
+                  Texto demasiado breve.
+                  </p>
+                <p *ngIf="Text?.errors['maxlength']" class="text danger">
+                  Texto demasiado largo.
+                </p>
+               </div>
+            </div>
+  
+            <div class="form-group">
+                <label for="proyecto">Url Logo</label>
+              <div class="input-group">
+                <input type="text" class="form-control" formControlName="imglog" [(ngModel)]="imglog" [ngClass]="{'is-invalid': Imglog?.errors && Imglog?.touched, 'is-valid': !Imglog?.errors && Imglog?.touched}" id="imglog" type="text" placeholder="Ingresar Url Logo">
+              </div>
+              <div *ngIf="Imglog?.errors && Imglog?.touched">    
+                <p *ngIf="Imglog?.hasError('required')" class="text danger">
+                URL de logo requerida.
+                </p>
+              </div>
+            </div>
+
+            <div class="form-group">
+                <label for="proyecto">ID</label>
+              <div class="input-group">
+                <input type="text" class="form-control" formControlName="personaId" [(ngModel)]="personaId" [ngClass]="{'is-invalid': PersonaId?.errors && PersonaId?.touched, 'is-valid': !PersonaId?.errors && PersonaId?.touched}" id="personaId" type="text" placeholder="Ingresar ID">
+              </div>
+              <div *ngIf="PersonaId?.errors && PersonaId?.touched">    
+                <p *ngIf="PersonaId?.hasError('required')" class="text danger">
+                ID es requerido.
+                </p>
+                <p *ngIf="PersonaId?.hasError('min')" class="text danger">
+                  El ID debe ser 1.
+                  </p>
+                <p *ngIf="PersonaId?.hasError('max')" class="text danger">
+                  El ID debe ser 1.
+                </p>
+               </div>
+            </div>
+          
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal" (click)="limpiar($event)">Limpiar</button>
+            <button type="submit" class="btn btn-primary">Agregar</button>
+          </div>
+        </form>
+      </div>
+    </form>
+    
+      </div>
+        </div>
+      </div>
+    </div>
+  

@@ -1,0 +1,29 @@
+<div class="container" *ngIf="perso">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+    <form [formGroup]="form"  (ngSubmit)="form.valid && onUpdate()">
+        <div class="form-group">
+            <label for="about"><h3>Acerca de Mi</h3></label>
+            <div class="form-group">
+                <label for="educacion"><h6>Descripción</h6></label>
+            <textarea type="text" class="form-control mb-3" id="about" formControlName="about" [(ngModel)]="perso.about" required rows="5"[ngClass]="{'is-invalid': About?.errors && About?.touched, 'is-valid': !About?.errors && About?.touched}" ></textarea>
+        </div>
+        <div *ngIf="About?.errors && About?.touched">    
+            <p *ngIf="About?.hasError('required')" class="text danger">
+             El texto es requerido.
+            </p>
+            <p *ngIf="About?.errors['minlength']" class="text danger">
+                Texto demasiado breve.
+                </p>
+              <p *ngIf="About?.errors['maxlength']" class="text danger">
+                Texto demasiado largo.
+              </p>
+        </div>
+    </div>
+        <button class="btn btn-primary">
+            Actualizar Texto
+        </button>
+    </form>
+</div>
+</div>
+</div>

@@ -3,49 +3,65 @@
       <div class="row">
         <div class="col">
 
-          <button class= "btn btn-close-green edit skils1"
+          
+      
 
-        *ngIf="mostrarDatos === true">
-        <i class= "fa-solid fa-pencil" type="button" data-bs-toggle="modal" data-bs-target="#editSkil8"></i>
-        
-        
-      </button>
-      <button class= "btn btn-close-green edit skils1"
+      
+          <h3><u>Proyectos</u></h3>
 
-        *ngIf="mostrarDatos === true">
-        
-        <i class= "fa-solid fa-plus" type="button" data-bs-toggle="modal" data-bs-target="#editSkil9"></i>
-        
-      </button>
-
-      <button class= "btn btn-close-green edit skils1"
+          <button class= "btn btn-close-green edit skils3"
 
         *ngIf="mostrarDatos === true">
         
-        <i class= "fa-solid fa-trash" type="button" data-bs-toggle="modal" data-bs-target="#editSkil10"></i>
+        <i class= "fa-solid fa-plus" type="button" data-bs-toggle="modal" data-bs-target="#newPro"></i>
         
       </button>
-          <h3><u>{{sectionPro.proyecto.nombre}}</u></h3>
           
           
         </div>
   
         <div class="col-10 mt-4">
+
+          
           <div *ngFor="let project of projectsList" class="row">
             <div class="col-10">
           
           <h6><span class="rojo"><u>{{project.name}}</u></span></h6>
           <h6><span class="rojo">{{project.text}}</span></h6>
+
+          <button class= "btn btn-close-green edit skils1"
+           *ngIf="mostrarDatos === true">
+           <i class= "fa-solid fa-pencil" type="button" routerLink="/editproye/{{project.id}}"></i>
+         </button>
+
+        <button class= "btn btn-close-green edit skils2"
+
+        *ngIf="mostrarDatos === true">
+        
+        <i class= "fa-solid fa-trash" type="button" (click)="onDelete(project.id)"></i>
+        
+      </button>
           
           <br>
           <br>
         </div>
         <div class="col-2">
           <img class="logo2" [src]="project.imglog">
+
+          
+         
+
+         
         </div>
+
+        
+        
         
       </div>
     </div>
   </div>
   </div>
   </section><br><br>
+
+<app-newproyecto></app-newproyecto>
+  

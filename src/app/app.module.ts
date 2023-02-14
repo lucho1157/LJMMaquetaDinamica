@@ -18,6 +18,20 @@ import { EducacionComponent } from './educacion/educacion.component';
 import { ProyectosComponent } from './proyectos/proyectos.component';
 import { EditSkilComponent } from './modals/edit-skil/edit-skil.component';
 import { FooterComponent } from './footer/footer.component';
+import { EditAcercademiComponent } from './acercademi/edit-acercademi/edit-acercademi.component';
+import { InicioComponent } from './inicio/inicio.component';
+import { NewhabilidadComponent } from './habilidades/newhabilidad/newhabilidad.component';
+import { EdithabilidadesComponent } from './habilidades/edithabilidades/edithabilidades.component';
+import { DeletehabilidadesComponent } from './habilidades/deletehabilidades/deletehabilidades.component';
+import { EditproyectosComponent } from './proyectos/editproyectos/editproyectos.component';
+import { EditeducacionComponent } from './educacion/editeducacion/editeducacion.component';
+import { NeweducacionComponent } from './educacion/neweducacion/neweducacion.component';
+import { NewproyectoComponent } from './proyectos/newproyecto/newproyecto.component';
+import { EditexperienciaComponent } from './experiencia/editexperiencia/editexperiencia.component';
+import { NewexperienciaComponent } from './experiencia/newexperiencia/newexperiencia.component';
+import { EditPerfilComponent } from './acercademi/edit-perfil/edit-perfil.component';
+import { EditarExperienciaComponent } from './experiencia/editar-experiencia/editar-experiencia.component';
+
 
 
 
@@ -43,6 +57,20 @@ const routes: Route[] = [
     ProyectosComponent,
     EditSkilComponent,
     FooterComponent,
+    EditAcercademiComponent,
+    InicioComponent,
+    NewhabilidadComponent,
+    EdithabilidadesComponent,
+    DeletehabilidadesComponent,
+    EditproyectosComponent,
+    EditeducacionComponent,
+    NeweducacionComponent,
+    NewproyectoComponent,
+    EditexperienciaComponent,
+    NewexperienciaComponent,
+    EditPerfilComponent,
+    EditarExperienciaComponent,
+    
     
    
     

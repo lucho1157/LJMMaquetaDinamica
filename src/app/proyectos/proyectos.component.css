@@ -12,7 +12,7 @@
 
   .logo2 {
     float:right;
-      width: 70px;
+      width: 60px;
       margin-left: 140px;
   }
   
@@ -36,7 +36,18 @@
 
   button.btn.btn-close-green.edit.skils1 {
     float: left;
-    margin-right: 5%;
+  
+  }
+
+  button.btn.btn-close-green.edit.skils2 {
+    float: left;
+  margin-left: 2%;
+  }
+
+  button.btn.btn-close-green.edit.skils3 {
+    
+    float: left;
+  margin-right: 5%;
   }
   
   i.fa-solid.fa-pencil{

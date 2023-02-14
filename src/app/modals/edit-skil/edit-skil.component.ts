@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PortfolioService } from 'src/app/portfolio.service';
+import { AcercademiService } from 'src/app/serviciosmodel/acercademi.service';
+import { HabilidadesService } from 'src/app/serviciosmodel/habilidades.service';
 
 @Component({
   selector: 'app-edit-skil',
@@ -7,6 +9,7 @@ import { PortfolioService } from 'src/app/portfolio.service';
   styleUrls: ['./edit-skil.component.css']
 })
 export class EditSkilComponent implements OnInit {
+  personasList:any;
   skilsList:any;
   redesList:any;
   schoolsList:any;
@@ -16,15 +19,13 @@ export class EditSkilComponent implements OnInit {
 
   
 
-  constructor(private datosPortfolio:PortfolioService) { }
+  constructor(private datosPortfolio:PortfolioService, private habilidadesService: HabilidadesService, private demiService: AcercademiService) { }
 
   ngOnInit(): void {
     this.datosPortfolio.obtenerDatos().subscribe(data =>{
       this.redesList=data.redes;
     });
-    this.datosPortfolio.obtenerDatos().subscribe(data =>{
-      this.skilsList=data.skils
-    });
+    
     this.datosPortfolio.obtenerDatos().subscribe(data =>{
       this.schoolsList=data.schools;
     });
@@ -33,6 +34,10 @@ export class EditSkilComponent implements OnInit {
     });
     this.datosPortfolio.obtenerDatos().subscribe(data =>{
       this.projectsList=data.projects;
+    });
+    this.demiService.verPersonas().subscribe(data =>{
+      console.log(data);
+      this.personasList=data;
     });
   }
 

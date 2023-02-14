@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PortfolioService } from '../portfolio.service';
+import { RedesService } from '../serviciosmodel/redes.service';
 
 @Component({
   selector: 'app-redes',
@@ -12,16 +13,24 @@ export class RedesComponent implements OnInit {
 
   
 
-  constructor(private datosPortfolio:PortfolioService) { }
+  constructor(private datosPortfolio:PortfolioService, private redesService:RedesService) { }
 
   ngOnInit(): void {
+
+    this.cargarHabilidades();
+
     this.mostrarDatos=false;
     this.datosPortfolio.disparadorDeEdicion.subscribe( data => {
       this.mostrarDatos=true;
       })
-    this.datosPortfolio.obtenerDatos().subscribe(data =>{
-      this.redesList=data.redes
-      });
+    
+  }
+
+  cargarHabilidades():void{
+    this.redesService.verRedes().subscribe(data =>{
+      console.log(data);
+      this.redesList=data;
+    });
   }
 
 }

@@ -1,0 +1,43 @@
+<div class="container" *ngIf="proye">
+  <div class="row justify-content-center">
+      <div class="col-md-6">
+        <form [formGroup]="form"  (ngSubmit)="form.valid && onUpdate()">
+      <div class="form-group">
+          <label for="proyecto"><h3>Editar Proyecto</h3></label>
+          <div class="form-group">
+            <label for="educacion"><h6>Nombre del Proyecto</h6></label>
+          <input type="text" class="form-control mb-3" id="name" formControlName="name" [(ngModel)]="proye.name" required [ngClass]="{'is-invalid': Name?.errors && Name?.touched, 'is-valid': !Name?.errors && Name?.touched}">
+          <div *ngIf="Name?.errors && Name?.touched">    
+            <p *ngIf="Name?.hasError('required')" class="text danger">
+            El Nombre del proyecto es requerido.
+            </p>
+          </div>
+        </div>
+        <label for="educacion"><h6>Descripción</h6></label>
+          <textarea type="text" class="form-control mb-3" id="text" formControlName="text" [(ngModel)]="proye.text" required [ngClass]="{'is-invalid': Text?.errors && Text?.touched, 'is-valid': !Text?.errors && Text?.touched}"></textarea>
+           <div *ngIf="Text?.errors && Text?.touched">    
+            <p *ngIf="Text?.hasError('required')" class="text danger">
+            La Descripción es requerida.
+            </p>
+            <p *ngIf="Text?.errors['minlength']" class="text danger">
+              Texto demasiado breve.
+              </p>
+            <p *ngIf="Text?.errors['maxlength']" class="text danger">
+              Texto demasiado largo.
+            </p>
+           </div>
+           <label for="educacion"><h6>URL logo del proyecto</h6></label>
+          <input type="text" class="form-control mb-3" id="imglog" formControlName="imglog" [(ngModel)]="proye.imglog" required [ngClass]="{'is-invalid': Imglog?.errors && Imglog?.touched, 'is-valid': !Imglog?.errors && Imglog?.touched}">
+          <div *ngIf="Imglog?.errors && Imglog?.touched">    
+            <p *ngIf="Imglog?.hasError('required')" class="text danger">
+            URL de logo requerida.
+            </p>
+          </div>
+       </div>
+      <button class="btn btn-primary">
+          Actualizar Proyecto
+      </button>
+  </form>
+</div>
+</div>
+</div>

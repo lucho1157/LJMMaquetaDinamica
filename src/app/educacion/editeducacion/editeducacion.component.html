@@ -1,0 +1,50 @@
+<div class="container" *ngIf="educ">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form [formGroup]="form" (ngSubmit)="form.valid && onUpdate()">
+                <div class="form-group">
+                    <label for="educacion">
+                        <h3>Editar Educacion</h3>
+                    </label>
+                    <div class="form-group">
+                        <label for="educacion"><h6>Nivel Académico</h6></label>
+                    <input type="text" class="form-control mb-9" id="level" formControlName="level" [(ngModel)]="educ.level"
+                        required [ngClass]="{'is-invalid': Level?.errors && Level?.touched, 'is-valid': !Level?.errors && Level?.touched}">
+                        <div *ngIf="Level?.errors && Level?.touched">
+                            <p *ngIf="Level?.hasError('required')" class="text danger">
+                              El Nivel es requerido.
+                            </p>
+                          </div>
+                    </div>
+                    <label for="educacion"><h6>Instituto</h6></label>
+                    <input type="text" class="form-control mb-9" id="instituto" formControlName="instituto"
+                        [(ngModel)]="educ.instituto" required [ngClass]="{'is-invalid': Instituto?.errors && Instituto?.touched, 'is-valid': !Instituto?.errors && Instituto?.touched}">
+                        <div *ngIf="Instituto?.errors && Instituto?.touched">
+                            <p *ngIf="Instituto?.hasError('required')" class="text danger">
+                              El Nombre del instituto es requerido.
+                            </p>
+                        </div>
+                        <label for="educacion"><h6>Carrera</h6></label>
+                    <input type="text" class="form-control mb-9" id="career" formControlName="career" [(ngModel)]="educ.career"
+                        required [ngClass]="{'is-invalid': Career?.errors && Career?.touched, 'is-valid': !Career?.errors && Career?.touched}">
+                        <div *ngIf="Career?.errors && Career?.touched">
+                            <p *ngIf="Career?.hasError('required')" class="text danger">
+                              La carrera es requerida.
+                            </p>
+                        </div>
+                        <label for="educacion"><h6>Título</h6></label>
+                    <input type="text" class="form-control mb-9" id="title" formControlName="title" [(ngModel)]="educ.title">
+                    <label for="educacion"><h6>Desde</h6></label>
+                    <input type="text" class="form-control mb-9" id="start" formControlName="start" [(ngModel)]="educ.start">
+                    <label for="educacion"><h6>Hasta</h6></label>
+                    <input type="text" class="form-control mb-9" id="end" formControlName="end" [(ngModel)]="educ.end">
+                    <label for="educacion"><h6>URL logodel instituto</h6></label>
+                    <input type="text" class="form-control mb-3" id="imglog" formControlName="imglog" [(ngModel)]="educ.imglog">
+                </div>
+                <button class="btn btn-primary">
+                    Actualizar Educacion
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

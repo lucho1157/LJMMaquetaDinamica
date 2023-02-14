@@ -4,25 +4,42 @@
       <div class="col-9 mt-4">
         
         <ul class="progress-circle-container">
-          <li *ngFor="let skil of skilsList"
-           class="progress-circle progress-65"><span>{{skil.porcentaje}}</span><b>{{skil.habilidad}}</b>
+          <li *ngFor="let skil of skilsList; index as de"
+           class="progress-circle progress-65"><span>{{skil.porcentaje}}</span>
+           <b>{{skil.habilidad}}</b>
+           <b *ngIf="mostrarDatos === true">
+
+            <button class= "btn btn-close-green edit skils">
+             <i class= "fa-solid fa-pencil" type="button" routerLink="/edithabi/{{skil.id}}"></i>
+            </button>
+           </b>
+
+           
+
+           <b *ngIf="mostrarDatos === true">
+
+        <button class= "btn btn-close-green edit skils1">
+        
+        <i class= "fa-solid fa-trash" type="button" (click)="onDelete(skil.id)"></i>
+        
+      </button>
+      </b>
           </li>
           
         </ul>
       </div>
       <div class="col-3 mt-4">
-        <button class= "btn btn-close-green edit skils"
+        
+
+        
+        
+        
+      
+      <button class= "btn btn-close-green edit skils2"
 
         *ngIf="mostrarDatos === true">
-        <i class= "fa-solid fa-pencil" type="button" data-bs-toggle="modal" data-bs-target="#editSkil"></i>
         
-        
-      </button>
-      <button class= "btn btn-close-green edit skils1"
-
-        *ngIf="mostrarDatos === true">
-        
-        <i class= "fa-solid fa-plus" type="button" data-bs-toggle="modal" data-bs-target="#editSkil1"></i>
+        <i class= "fa-solid fa-plus" type="button" data-bs-toggle="modal" data-bs-target="#newHab"></i>
         
       </button>
         <h3><u>Habilidades</u></h3>
@@ -33,4 +50,48 @@
   
 </section><br><br>
 
-<app-edit-skil></app-edit-skil>
+<div class="modal fade" id="deletSkil" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Eliminar Habilidad</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        
+      </div>
+      <div class="modal-body">
+        <form>
+
+        <div class="form-group">
+          <label for="habilidad">Habilidad</label>
+          <div class="input-group">
+            <input type="text" class="form-control" name="habili" id="habili" type="text" placeholder="">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="porcentaje">Pocentaje</label>
+          <div class="input-group">
+            <input type="text" class="form-control" name="porcen" id="porcen" type="text" placeholder="">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="personaId">PersonaId</label>
+          <div class="input-group">
+            <input type="text" class="form-control" name="perId" id="perId" type="text" placeholder="">
+          </div>
+        </div>
+      </form>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary">Eliminar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<app-newhabilidad></app-newhabilidad>
+

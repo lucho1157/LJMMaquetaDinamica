@@ -1,0 +1,123 @@
+<!-- Modal Crear Educación -->
+
+<div class="modal fade" id="newEdu" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Agregar Educación</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+          (click)="limpiar($event)"></button>
+      </div>
+      <div class="modal-body">
+        <form class="">
+          <div class="col-auto">
+            <form [formGroup]="form" (ngSubmit)="onEnv($event)">
+
+              <div class="form-group">
+                <label for="educacion">Educacion</label>
+                <div class="input-group">
+                  <input type="text" class="form-control" formControlName="level" [(ngModel)]="level"
+                    [ngClass]="{'is-invalid': Level?.errors && Level?.touched, 'is-valid': !Level?.errors && Level?.touched}"
+                    id="level" type="text" placeholder="Ingresar Nivel Académico">
+                </div>
+                <div *ngIf="Level?.errors && Level?.touched">
+                  <p *ngIf="Level?.hasError('required')" class="text danger">
+                    El Nivel es requerido.
+                  </p>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="porcentaje">Institución</label>
+                <div class="input-group">
+                  <input type="text" class="form-control" formControlName="instituto" [(ngModel)]="instituto"
+                    [ngClass]="{'is-invalid': Instituto?.errors && Instituto?.touched, 'is-valid': !Instituto?.errors && Instituto?.touched}"
+                    id="instituto" type="text" placeholder="Ingresar Instituto">
+                </div>
+                <div *ngIf="Instituto?.errors && Instituto?.touched">
+                  <p *ngIf="Instituto?.hasError('required')" class="text danger">
+                    El Nombre del instituto es requerido.
+                  </p>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="personaId">Carrera</label>
+                <div class="input-group">
+                  <input type="text" class="form-control" formControlName="career" [(ngModel)]="career"
+                    [ngClass]="{'is-invalid': Career?.errors && Career?.touched, 'is-valid': !Career?.errors && Career?.touched}"
+                    id="career" type="text" placeholder="Ingresar Carrera">
+                </div>
+                <div *ngIf="Career?.errors && Career?.touched">
+                  <p *ngIf="Career?.hasError('required')" class="text danger">
+                    La carrera es requerida.
+                  </p>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="educacion">Título</label>
+                <div class="input-group">
+                  <input type="text" class="form-control" id="title" formControlName="title" [(ngModel)]="title"
+                    placeholder="Título">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="porcentaje">Inicio</label>
+                <div class="input-group">
+                  <input type="text" class="form-control" id="start" formControlName="start" [(ngModel)]="start"
+                    type="text" placeholder="Desde">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="educacion">Fin</label>
+                <div class="input-group">
+                  <input type="text" class="form-control" id="end" formControlName="end" [(ngModel)]="end" type="text"
+                    placeholder="Hasta">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="porcentaje">Url Logo</label>
+                <div class="input-group">
+                  <input type="text" class="form-control" id="imglog" formControlName="imglog" [(ngModel)]="imglog"
+                    type="text" placeholder="Ingresar url logo">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="porcentaje">ID</label>
+                <div class="input-group">
+                  <input type="text" class="form-control" formControlName="personaId" [(ngModel)]="personaId"
+                    [ngClass]="{'is-invalid': PersonaId?.errors && PersonaId?.touched, 'is-valid': !PersonaId?.errors && PersonaId?.touched}"
+                    id="personaId" type="text" placeholder="Ingresar ID">
+                </div>
+                <div *ngIf="PersonaId?.errors && PersonaId?.touched">
+                  <p *ngIf="PersonaId?.hasError('required')" class="text danger">
+                    ID es requerido.
+                  </p>
+                  <p *ngIf="PersonaId?.hasError('min')" class="text danger">
+                    El ID debe ser 1.
+                  </p>
+                  <p *ngIf="PersonaId?.hasError('max')" class="text danger">
+                    El ID debe ser 1.
+                  </p>
+                </div>
+              </div>
+
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal"
+                  (click)="limpiar($event)">Limpiar</button>
+                <button type="submit" class="btn btn-primary">Agregar</button>
+              </div>
+            </form>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>
